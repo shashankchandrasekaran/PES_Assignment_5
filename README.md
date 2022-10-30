@@ -7,7 +7,7 @@ For Debug:
 The .text size is 20,844 bytes
 The execution time is 1136 msec
 
-For release
+For Release
 The .text size is 19536 bytes
 The execution time is 1137 msec
 
