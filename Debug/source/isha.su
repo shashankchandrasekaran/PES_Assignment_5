@@ -1,0 +1,4 @@
+../source/isha.c:34:13:ISHAPadMessage	16	static
+../source/isha.c:64:6:ISHAReset	16	static
+../source/isha.c:80:6:ISHAResult	16	static
+../source/isha.c:103:6:ISHAInput	32	static
