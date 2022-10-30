@@ -8,7 +8,7 @@ The .text size is 20,844 bytes
 The execution time is 1136 msec
 
 For Release
-The .text size is 19536 bytes
+The .text size is 19,536 bytes
 The execution time is 1137 msec
 
 Most changes that were made have been added as comments in the source files. These can be identified by prefix "SC:"
