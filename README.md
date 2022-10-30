@@ -11,7 +11,7 @@ For Release
 The .text size is 19536 bytes
 The execution time is 1137 msec
 
-Most changes that were made have been added as comments in the source files. 
+Most changes that were made have been added as comments in the source files. These can be identified by prefix "SC:"
 One common change is that places where variables are forced to 8 bit or 32 bit of same type have been eliminated. Eg: temp &= 0xFFFFFFFF;
 
 In pbkdf2_test.c,for hexdigit_to_int, there was a warning : "Control reaches end of non-void function". The file was updated to add return 0 at the 
@@ -25,7 +25,7 @@ Following is an overview of the changes made for the functions:
 2) isha.c
 a) static void ISHAPadMessage(ISHAContext *ctx)
 - memset and memcpy used to get rid of the while loop
-- Zero padding till MB_Idx till 60 instead of 56 as the length_high is eliminated as it will also be zero
+- Zero padding of MB_Idx till 60 instead of 56 as the length_high is eliminated as it will always be zero
 - For storing the message length, used the inbuilt bswap32 function on length and typecasted MBlock to 32 bit to store the length
 
 b) void ISHAReset(ISHAContext *ctx)
@@ -139,7 +139,7 @@ static void ISHAProcessMessageBlock(ISHAContext *ctx)
     ISHAInput(&ctx, key, key_len);
     ISHAResult(&ctx, keypad);
     
-   - 2 structures were created to store the states when ipad and keypad were passed in ISHAInput function
+   - 2 structures were created to store the states when ipad and opad were passed in ISHAInput function
    - Flag is checked for 1 so that keypad,ipad and opad is calculated only once in the entire program as key is not changing
    - The states of the 2 structures are equated to ctx before passing ctx to ISHAInput
    
